@@ -3,36 +3,126 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <style type="text/css">
+           html>body{font-family:"PingFang-SC-Light","PingFang SC","Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,Verdana,"Microsoft Yahei",sans-serif;font-size:14px;}
+           * {padding:0;margin:0}
+           html ul{list-style:none;}
+           html a:hover,a:focus{text-decoration:none;}
+           @@media (max-width: 767px) {.h1, h1 {font-size:26px}.h2, h2 {font-size:22px}.h3, h3 {font-size:20px}.h4, h4 {font-size:16px}.h5, h5 {font-size:14px}.h6, h6 {font-size:12px}}
+           @@media (min-width: 768px) {.h1, h1 {font-size:28px}.h2, h2 {font-size:26px}.h3, h3 {font-size:24px}.h4, h4 {font-size:20px}.h5, h5 {font-size:18px}.h6, h6 {font-size:14px}}
+           @@media (min-width: 992px) {.h1, h1 {font-size: 34px;}.h2, h2{font-size:30px}.h3, h3 {font-size:26px}.h4, h4 {font-size:22px}.h5, h5 {font-size:18px}.h6, h6 {font-size:14px}}
+           @@media (min-width: 1200px) {.h1, h1 {font-size:36px}.h2, h2 {font-size:32px}.h3, h3 {font-size:28px}.h4, h4 {font-size:24px}.h5, h5 {font-size:18px}.h6, h6 {font-size:14px}}
+          
+    </style>
+    <style type="text/css">
+        /*主题颜色 color：#23A1F6*/
+        /*bootstrap 覆盖样式*/
+        html .navbar-nav>li>a:hover,.navbar-nav>li>a:focus{background:none;}
+        html .navbar-nav > li {position:relative}
+        html .navbar-nav li > a {line-height:20px;color:#ffffff;padding-left:30px;padding-right:30px}
+        html .navbar-nav li>a:hover{color:#23A1F6;}
+        html .navbar-toggle {background-color:#23A1F6}
+        .glyphicon-align-justify {color:#ffffff}
+             /*{background-color: rgba(23,34,48,.7);}*/
+        /*自定义样式*/
+        html #header {position:fixed;top:0;width:100%;z-index:1000;}
+        html .li-easein {transition:all .5s ease-in .1s}
+        html .navbar   .nav-submenu {display:none;}
+        html .navbar .nav-submenu li>a{height:35px;line-height:35px;display:inline-block;padding:0 !important}
+       
+         .span_arrow {position:absolute;left:50%;top:-10px;margin-left:-10px}
+         .arrow_up{height:0;width:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px  solid #ffffff}
+        @@media(min-width:768px)
+        {
+           .nav .nav-submenu {width:120px;padding:10px 0;text-align:center;position:absolute;background-color:rgba(23,34,48,.7);border-top:2px solid #ffffff;display:none;top:50px;left:50%;margin-left:-60px;}
+           .navbar-nav li:hover .nav-submenu{display:block;}
+        }
+        @@media(max-width:768px) {
+              #collapse_left {
+              width:67%;
+              height:100%;
+              position:fixed;
+              top:0;
+              left:0;
+              background-color:rgba(23,34,48,.7);
+              display:none;
+          }
+        }
+    </style>
 </head>
 <body>
-     <header id="header">
-         <div class="container">
-             <div class="navbar navbar-fixed-top">
-                 <div class="container">
-                     <div class="navbar-header">
-                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                             <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                         </button>
-                         @Html.ActionLink("Logo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                     </div>
-                     <div class="navbar-collapse collapse">
-                         <ul class="nav navbar-nav navbar-right">
-                             <li>@Html.ActionLink("主页", "Index", "Home")</li>
-                             <li>@Html.ActionLink("关于", "About", "Home")</li>
-                             <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
-                         </ul>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </header>
+    <!--头部菜单-->
+    <header id="header">
+        <span class=".glyphicon .glyphicon-align-justify"></span>
+        <div class="navbar navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" id="btn_slide">
+                       <span class="glyphicon glyphicon-align-justify"></span>
+                    </button>
+                    @Html.ActionLink("Logo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div id="collapse_left">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            @Html.ActionLink("首页", "Index", "Home")
+                        </li>
+                        <li class="li-easein">
+                            @Html.ActionLink("产品", "About", "Home")
+                        </li>
+                        <li class="li-easein">@Html.ActionLink("解决方案", "Contact", "Home")</li>
+                        <li class="li-easein">@Html.ActionLink("服务", "Contact", "Home")</li>
+                        <li class="li-easein">
+                            @Html.ActionLink("案例", "Contact", "Home")
+                                    <div class="nav-submenu">
+                                       <span class="span_arrow arrow_up"></span>
+                                        <ul class="list-link">
+                                         <li><a href="#">公司简介</a></li>
+                                         <li><a href="#">联系我们</a></li>
+                                         <li><a href="#">职位招聘</a></li>
+                                         </ul>
+                                     </div>
+                        </li>
+                        <li class="li-easein">
+                        @Html.ActionLink("关于我们", "Contact", "Home")
+                        <div class="nav-submenu">
+                            <span class="span_arrow arrow_up"></span>
+                            <ul class="list-link">
+                                <li><a href="#">公司简介</a></li>
+                                <li><a href="#">联系我们</a></li>
+                                <li><a href="#">职位招聘</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--头部菜单 end-->
+    <!--背景广告轮播-->
+    <div id="banner">
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+  
 
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="~/Content/Images/banner2.jpg" alt="华邦互联" />
+                </div>
+                <div class="item">
+                    <img src="~/Content/Images/banner1.jpg" alt="华邦互联"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--背景广告轮播-->
+    <!--底部-->
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -44,5 +134,14 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        $(function () {
+            $("#btn_slide").click(function () {
+                $("#collapse_left").animate({
+                   width:'toggle'
+                })
+            })
+        })
+    </script>
 </body>
 </html>
