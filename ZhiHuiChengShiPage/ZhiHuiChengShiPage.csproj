@@ -159,6 +159,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\banner1.jpg" />
     <Content Include="Content\Images\banner2.jpg" />
+    <Content Include="Content\Images\banner3.jpg" />
+    <Content Include="Content\Images\foot_bg.jpg" />
     <Content Include="Content\Images\psb.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

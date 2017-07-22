@@ -9,7 +9,7 @@
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <style type="text/css">
            html>body{font-family:"PingFang-SC-Light","PingFang SC","Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,Verdana,"Microsoft Yahei",sans-serif;font-size:14px;}
-           * {padding:0;margin:0}
+           *{padding:0;margin:0}
            html ul{list-style:none;}
            html a:hover,a:focus{text-decoration:none;}
            @@media (max-width: 767px) {.h1, h1 {font-size:26px}.h2, h2 {font-size:22px}.h3, h3 {font-size:20px}.h4, h4 {font-size:16px}.h5, h5 {font-size:14px}.h6, h6 {font-size:12px}}
@@ -26,31 +26,39 @@
         html .navbar-nav li > a {line-height:20px;color:#ffffff;padding-left:30px;padding-right:30px}
         html .navbar-nav li>a:hover{color:#23A1F6;}
         html .navbar-toggle {background-color:#23A1F6}
+        html .carousel-inner > .item > img {width:100%;height:100% }
+        html .carousel-inner > .item {}
         .glyphicon-align-justify {color:#ffffff}
-             /*{background-color: rgba(23,34,48,.7);}*/
+        
         /*自定义样式*/
         html #header {position:fixed;top:0;width:100%;z-index:1000;}
-        html .li-easein {transition:all .5s ease-in .1s}
+        html .li-easein{transition:all .5s ease-in .1s}
         html .navbar   .nav-submenu {display:none;}
         html .navbar .nav-submenu li>a{height:35px;line-height:35px;display:inline-block;padding:0 !important}
-       
-         .span_arrow {position:absolute;left:50%;top:-10px;margin-left:-10px}
-         .arrow_up{height:0;width:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px  solid #ffffff}
+        .span_arrow {position:absolute;left:50%;top:-10px;margin-left:-10px}
+        .arrow_up{height:0;width:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px  solid #ffffff}
+
+        footer {background-image:url(../../Content/Images/foot_bg.jpg);background-size:100% 100%;color:#ffffff;padding:20px 0;}
+        footer a,footer ul > li{color:#ffffff;margin-bottom:5px;}
+        .a-easein{transition:all ease-in 0.3s}
+        .a-easein:hover {color:#23A1F6}
+        footer h5 {margin-bottom:20px}
+        html footer h5 span{ border-bottom:2px solid #23A1F6;padding-bottom:5px}
+        footer .company {font-family:'宋体'}
+        @@media(max-width:768px) {
+             #collapse_left {width:67%;height:100%;position:fixed;top:0;left:0;background-color:rgba(23,34,48,.7);display:none;}
+        }
         @@media(min-width:768px)
         {
            .nav .nav-submenu {width:120px;padding:10px 0;text-align:center;position:absolute;background-color:rgba(23,34,48,.7);border-top:2px solid #ffffff;display:none;top:50px;left:50%;margin-left:-60px;}
            .navbar-nav li:hover .nav-submenu{display:block;}
+           .carousel-inner > .item {height:300px;}
         }
-        @@media(max-width:768px) {
-              #collapse_left {
-              width:67%;
-              height:100%;
-              position:fixed;
-              top:0;
-              left:0;
-              background-color:rgba(23,34,48,.7);
-              display:none;
-          }
+        @@media(min-width: 1200px) {
+            .carousel-inner > .item {height:500px;}
+        }
+        @@media (min-width:992px) {
+            .carousel-inner > .item {height:500px;}
         }
     </style>
 </head>
@@ -62,7 +70,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" id="btn_slide">
-                       <span class="glyphicon glyphicon-align-justify"></span>
+                        <span class="glyphicon glyphicon-align-justify"></span>
                     </button>
                     @Html.ActionLink("Logo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 </div>
@@ -74,20 +82,34 @@
                         <li class="li-easein">
                             @Html.ActionLink("产品", "About", "Home")
                         </li>
-                        <li class="li-easein">@Html.ActionLink("解决方案", "Contact", "Home")</li>
-                        <li class="li-easein">@Html.ActionLink("服务", "Contact", "Home")</li>
+
                         <li class="li-easein">
-                            @Html.ActionLink("案例", "Contact", "Home")
-                                    <div class="nav-submenu">
-                                       <span class="span_arrow arrow_up"></span>
-                                        <ul class="list-link">
-                                         <li><a href="#">公司简介</a></li>
-                                         <li><a href="#">联系我们</a></li>
-                                         <li><a href="#">职位招聘</a></li>
-                                         </ul>
-                                     </div>
+                            @Html.ActionLink("解决方案", "Contact", "Home")
+                            <div class="nav-submenu">
+                                <span class="span_arrow arrow_up"></span>
+                                <ul class="list-link">
+                                    <li><a href="#">智慧城市</a></li>
+                                    <li><a href="#">智慧园区</a></li>
+                                    <li><a href="#">物业管理</a></li>
+                                    <li><a href="#">智慧校园</a></li>
+                                    <li><a href="#">智慧生活</a></li>
+                                </ul>
+                            </div>
                         </li>
-                        <li class="li-easein">
+
+                    <li class="li-easein">@Html.ActionLink("服务", "Contact", "Home")</li>
+                    <li class="li-easein">
+                        @Html.ActionLink("案例", "Contact", "Home")
+                        <div class="nav-submenu">
+                            <span class="span_arrow arrow_up"></span>
+                            <ul class="list-link">
+                                <li><a href="#">公司简介</a></li>
+                                <li><a href="#">联系我们</a></li>
+                                <li><a href="#">职位招聘</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="li-easein">
                         @Html.ActionLink("关于我们", "Contact", "Home")
                         <div class="nav-submenu">
                             <span class="span_arrow arrow_up"></span>
@@ -98,50 +120,98 @@
                             </ul>
                         </div>
                     </li>
-                    </ul>
+                </ul>
                 </div>
             </div>
         </div>
     </header>
     <!--头部菜单 end-->
+
+
     <!--背景广告轮播-->
     <div id="banner">
-        <div id="myCarousel" class="carousel slide">
+        <div id="banner_carousel" class="carousel slide">
             <!-- 轮播（Carousel）指标 -->
-  
-
+            <ol class="carousel-indicators">
+                <li data-target="#banner_carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#banner_carousel" data-slide-to="1"></li>
+                <li data-target="#banner_carousel" data-slide-to="2"></li>
+            </ol>
             <!-- 轮播（Carousel）项目 -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="~/Content/Images/banner2.jpg" alt="华邦互联" />
+                    <img src="~/Content/Images/banner2.jpg" class="img-responsive" alt="华邦互联" />
                 </div>
                 <div class="item">
-                    <img src="~/Content/Images/banner1.jpg" alt="华邦互联"/>
+                    <img src="~/Content/Images/banner1.jpg" alt="华邦互联" class="img-responsive" />
+                </div>
+                <div class="item">
+                    <img src="~/Content/Images/banner3.jpg" alt="华邦互联" class="img-responsive" />
                 </div>
             </div>
         </div>
     </div>
     <!--背景广告轮播-->
+    @RenderBody()
     <!--底部-->
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</p>
-        </footer>
-    </div>
+    <footer>
+        <div class="container body-content">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <h5><span>联系我们</span></h5>
+                    <ul>
+                        <li>Tel：010-12456</li>
+                        <li>北京市石景山区鲁谷路西鑫大厦顶层</li>
+                        <li>客服QQ：1234567</li>
+                    </ul>
+                </div>
+                <div class="animated in col-xs-12 col-md-6 col-lg-3">
+                    <h5><span>链接</span></h5>
+                    <ul>
+                        <li><a href="#" class="a-easein">华夏盛想</a></li>
+                        <li><a href="#" class="a-easein">售电云</a></li>
+                        <li><a href="#" class="a-easein">售电云</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <h5><span>解决方案</span></h5>
+                    <ul>
+                        <li><a href="#" class="a-easein">智慧城市</a></li>
+                        <li><a href="#" class="a-easein">智慧地产</a></li>
+                        <li><a href="#" class="a-easein">智慧边防</a></li>
+                        <li><a href="#" class="a-easein">智慧物业后勤</a></li>
+                    </ul>
+                </div>
 
+                <div class="col-xs-12 col-md-6 col-lg-3">
+                    <h5><span>案例中心</span></h5>
+                    <ul>
+                        <li><a href="#" class="a-easein">美国华盛顿智慧城市</a></li>
+                        <li><a href="#" class="a-easein">湖南长沙智慧城市</a></li>
+                        <li><a href="#" class="a-easein">智慧园区系统</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="company">
+            <div class="container">
+                <p>北京华邦互联科技有限公司 Copyright @DateTime.Now.Year http://www.fissoft.com All Right reserved 京ICP备11077839号</p>
+            </div>
+        </div>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
     <script type="text/javascript">
         $(function () {
+            //$("#banner_carousel").carousel('cycle');
             $("#btn_slide").click(function () {
                 $("#collapse_left").animate({
-                   width:'toggle'
+                    width: 'toggle'
                 })
             })
         })
     </script>
 </body>
 </html>
+
