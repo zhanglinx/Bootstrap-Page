@@ -157,16 +157,22 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\201608261637160490.jpg" />
+    <Content Include="Content\Images\5967731c7a10f.png" />
+    <Content Include="Content\Images\5vsj.png" />
     <Content Include="Content\Images\banner1.jpg" />
     <Content Include="Content\Images\banner2.jpg" />
     <Content Include="Content\Images\banner3.jpg" />
     <Content Include="Content\Images\cg01_16.png" />
     <Content Include="Content\Images\cg01_20.png" />
     <Content Include="Content\Images\foot_bg.jpg" />
+    <Content Include="Content\Images\r02.jpg" />
     <Content Include="Content\Images\sj01.png" />
     <Content Include="Content\Images\sj02.png" />
     <Content Include="Content\Images\sj03.png" />
     <Content Include="Content\Images\sj04.png" />
+    <Content Include="Content\Images\yangzhouwuxianchengshi.jpg" />
+    <Content Include="Content\Images\yuanqu_4.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

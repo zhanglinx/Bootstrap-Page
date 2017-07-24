@@ -4,8 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
-    @Styles.Render("~/Content/css")
+    
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <style type="text/css">
            html>body{font-family:"PingFang-SC-Light","PingFang SC","Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,Verdana,"Microsoft Yahei",sans-serif;font-size:14px;}
@@ -26,13 +27,20 @@
         html .navbar-nav li > a {line-height:20px;color:#ffffff;padding-left:30px;padding-right:30px}
         html .navbar-nav li>a:hover{color:#23A1F6;}
         html .navbar-toggle {background-color:#23A1F6}
+        .navbar-static-top {padding:20px 0;}
+        
         html .carousel-inner > .item > img {width:100%;height:100% }
         html .carousel-inner > .item {}
         .glyphicon-align-justify {color:#ffffff}
         .container {padding:0}
         /*自定义样式*/
         html #header {position:fixed;top:0;width:100%;z-index:1000;}
-        html .li-easein{transition:all .5s ease-in .1s}
+        .bg-black {
+            background-color: #000 !important;
+            padding:0;
+            transition: all .5s ease-in-out;
+        }
+        html .li-easein{transition:all .5s ease-in .1s;-webkit-transition:all .5s ease-in .1s;-moz-transition:all .5s ease-in .1s}
         html .navbar   .nav-submenu {display:none;}
         html .navbar .nav-submenu li>a{height:35px;line-height:35px;display:inline-block;padding:0 !important}
         .span_arrow {position:absolute;left:50%;top:-10px;margin-left:-10px}
@@ -142,13 +150,13 @@
             <!-- 轮播（Carousel）项目 -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="~/Content/Images/banner2.jpg" class="img-responsive" alt="华邦互联" />
+                    <img src="~/Content/Images/banner3.jpg" class="img-responsive" alt="华邦互联" />
                 </div>
                 <div class="item">
                     <img src="~/Content/Images/banner1.jpg" alt="华邦互联" class="img-responsive" />
                 </div>
                 <div class="item">
-                    <img src="~/Content/Images/banner3.jpg" alt="华邦互联" class="img-responsive" />
+                    <img src="~/Content/Images/banner2.jpg" alt="华邦互联" class="img-responsive" />
                 </div>
             </div>
         </div>

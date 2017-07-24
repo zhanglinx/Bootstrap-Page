@@ -2,71 +2,223 @@
     ViewBag.Title = "Home Page";
 }
 @*<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@ 
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@
 <style type="text/css">
+    .bg-black {
+      background-color:#000 !important;
+    }
     .border_bottom {
-     border-bottom:2px solid #23A1F6;
-     padding-bottom:10px;
-    }
-    .body-content
-    {
-       margin-top:20px;
-    }
-    .company-tags {
-    margin-top:40px;
+        border-bottom: 2px solid #23A1F6;
+        padding-bottom: 10px;
     }
 
+    .body-content, .content-item {margin-top: 50px;}
+    .tags ,.items{margin-top: 40px;}
+    .content-tags {margin-bottom:20px;}
+    .content-bg {background-color:#f1f1f1}
+    .item-cont {background-color:#ffffff;margin-bottom:20px;box-shadow:0 0 2px 2px #dedede}
+    .item-box {
+        position: relative;
+    }
+    .item-title h4 {height:60px;line-height:60px;margin:0}
+
+    .item-desc:hover {
+        opacity: 1;
+        filter: alpha(opacity=1);
+        background-color: rgba(35,161,246,0.6);
+        padding-top: 20px;
+    }
+    .item-img > img {height: 300px;}
+
+    .item-desc {
+        position: absolute;
+        padding: 40px 20px;
+        display: block;
+        text-align: 0;
+        top: 0;
+        left: 0;
+        color: #ffffff;
+        background-color: rgba(35,161,246,0);
+        height: 100%;
+        width: 100%;
+        line-height: 1.8;
+        transition: all 0.5s ease-in-out;
+        opacity: 0;
+    }
 </style>
-<div class="body-content mt" style="height:1000px">
+<div class="body-content">
     <div class="container">
-        <h2 class="text-center"><span class="border_bottom">智慧城市系统</span></h2>
-        <div class="company-tags">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <div align="center">
-                  <img src="~/Content/Images/sj01.png"  class="img-responsive"/>
-                </div>
-                <div class="tag-content">
-                    <h4 class="text-center">集成全面系统</h4>
-                    <p>智慧城市平台多系统研发，满足城市智能化需求，全面的系统包括智慧园区、智慧交通、智慧物业后勤、智慧园区、智慧生活</p>
-                </div>
-            </div>
+        <div class="content-tags">
+            <h2 class="text-center"><span class="border_bottom">我们的服务</span></h2>
+            <div class="tags">
+                <div class="row clearfix">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div align="center">
+                            <img src="~/Content/Images/sj02.png" class="img-responsive" />
+                        </div>
+                        <div class="tag-content">
+                            <h4 class="text-center">改善生活体验</h4>
+                            <p>基于城市网络,全方位多维度优化吃、穿、住、行场景体验，结合智能终端，打造物联网生态高品质生活</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div align="center">
+                            <img src="~/Content/Images/sj01.png" class="img-responsive" />
+                        </div>
+                        <div class="tag-content">
+                            <h4 class="text-center">集成全面系统</h4>
+                            <p>智慧城市平台多系统研发，满足城市智能化需求，全面的系统包括智慧园区、智慧交通、智慧物业后勤、智慧园区、智慧生活</p>
+                        </div>
+                    </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <div align="center">
-                    <img src="~/Content/Images/sj02.png" class="img-responsive" />
-                </div>
-               <div class="tag-content">
-                   <h4 class="text-center">改善生活体验</h4>
-                   <p>基于城市网络,全方位多维度优化吃、穿、住、行场景体验，结合智能终端，打造物联网生态高品质生活</p>
-               </div>
-            </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <div align="center">
-                    <img src="~/Content/Images/sj03.png" class="img-responsive" />
-                </div>
-                <div class="tag-content">
-                    <h4 class="text-center">数据集市平台</h4>
-                    <p>对接政府数据、相关平台接口,适应各行业需求，包括
-                 民生、环保、公共安全、城市服务、工商业活动</p>
-                </div>
-            </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <div align="center">
-                    <img src="~/Content/Images/sj04.png" class="img-responsive" />
-                </div>
-                <div class="tag-content">
-                    <h4 class="text-center">智能式管理</h4>
-                    <p>利用先进的信息技术，实现城市 智慧式管理和运行，进而为城市中的人创造更美好的生活，促进城市的和谐、 可持续成长</p>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div align="center">
+                            <img src="~/Content/Images/sj03.png" class="img-responsive" />
+                        </div>
+                        <div class="tag-content">
+                            <h4 class="text-center">数据集市平台</h4>
+                            <p>
+                                对接政府数据、相关平台接口,适应各行业需求，包括
+                                民生、环保、公共安全、城市服务、工商业活动
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div align="center">
+                            <img src="~/Content/Images/sj04.png" class="img-responsive" />
+                        </div>
+                        <div class="tag-content">
+                            <h4 class="text-center">智能式管理</h4>
+                            <p>利用先进的信息技术，实现城市 智慧式管理和运行，进而为城市中的人创造更美好的生活，促进城市的和谐、 可持续成长</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-         </div>
-       </div>
+        </div>
+    </div>
+    <div class="content-bg">
+        <div class="container">
+            <div class="content-item">
+                <h2 class="text-center"><span class="border_bottom">智慧城市系统</span></h2>
+                <div class="items">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="item-cont">
+                                <div class="item-box">
+                                    <div class="item-img" align="center">
+                                        <img src="~/Content/Images/201608261637160490.jpg" class="img-responsive" />
+                                    </div>
+                                    <div class="item-desc">
+                                        <p>
+                                            智慧城市就是运用信息和通信技术手段感测、分析、整合城市运行核心系统的各项关键信息，从而对包括
+                                            民生、环保、公共安全、城市服务、工商业活动 在内的各种需求做出智能响应
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item-title">
+                                    <h4 class="text-center">城市管理系统</h4>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="item-cont">
+                                <div class="item-box">
+                                    <div class="item-img" align="center">
+                                        <img src="~/Content/Images/5vsj.png" class="img-responsive" />
+                                    </div>
+                                    <div class="item-desc">
+                                        通过运用信息化，服务平台化，社区移动化，数字智能化的建设打造涵盖园区楼宇自控BMS，公共安全SMS，能源管理EMS，运维管理PMS等四大体系，帮助园区转型升级易落地，快实施
+                                    </div>
+                                </div>
+                                <div class="item-title">
+                                    <h4 class="text-center">智慧园区</h4>
+                                </div>
+                            </div>
+                          </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="item-cont">
+                                <div class="item-box">
+                                    <div class="item-img" align="center">
+                                        <img src="~/Content/Images/yuanqu_4.png" class="img-responsive" />
+                                    </div>
+                                    <div class="item-desc">
+                                        智慧生活平台可以自由的与主流智能家居品牌产品互通，通过智能化扩展人的生活半径，通过互联网，延伸人的生活半径，让人看得更多、听得更远、想的更深，以人为本，构建人的全面智慧生活，实现人的全景智慧生活。
+                                    </div>
+                                </div>
+                                <div class="item-title">
+                                    <h4 class="text-center">智慧生活</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="item-cont">
+                                <div class="item-box">
+                                    <div class="item-img">
+                                        <img src="~/Content/Images/5vsj.png" class="img-responsive" />
+                                    </div>
+                                    <div class="item-desc">
+                                        通过运用信息化，服务平台化，社区移动化，数字智能化的建设打造涵盖园区楼宇自控BMS，公共安全SMS，能源管理EMS，运维管理PMS等四大体系，帮助园区转型升级易落地，快实施
+                                    </div>
+                                </div>
+                                <div class="item-title">
+                                    <h4 class="text-center">智慧园区</h4>
+                                </div>
+                            </div>
+                            </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="item-cont">
+                                <div class="item-box">
+                                    <div class="item-img">
+                                        <img src="~/Content/Images/yuanqu_4.png" class="img-responsive" />
+                                    </div>
+                                    <div class="item-desc">
+                                        智慧生活平台可以自由的与主流智能家居品牌产品互通，通过智能化扩展人的生活半径，通过互联网，延伸人的生活半径，让人看得更多、听得更远、想的更深，以人为本，构建人的全面智慧生活，实现人的全景智慧生活。
+                                    </div>
+                                </div>
+                                <div class="item-title">
+                                    <h4 class="text-center">智慧生活</h4>
+                                </div>
+                                </div>
+                            </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="item-cont">
+                                <div class="item-box">
+                                    <div class="item-img">
+                                        <img src="~/Content/Images/yuanqu_4.png" class="img-responsive" />
+                                    </div>
+                                    <div class="item-desc">
+                                        智慧生活平台可以自由的与主流智能家居品牌产品互通，通过智能化扩展人的生活半径，通过互联网，延伸人的生活半径，让人看得更多、听得更远、想的更深，以人为本，构建人的全面智慧生活，实现人的全景智慧生活。
+                                    </div>
+                                </div>
+                                <div class="item-title">
+                                    <h4 class="text-center">智慧生活</h4>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(window).scroll(function () {
+        var nav = $(".navbar-static-top");
+        if (nav.offset().top > 450)
+        {
+            nav.addClass("bg-black");
+        }
+        else {
+            nav.removeClass("bg-black");
+        }
+    })
+</script>
 
 
 
