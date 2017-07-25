@@ -1,17 +1,170 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<style type="text/css">
+    .nav-tabs {
+        border-bottom: none;
+    }
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+    .nav.nav-tabs > li > a {
+        padding: 0;
+    }
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    .banner > img {
+        width: 100%;
+        height: 500px;
+    }
+
+    .banner, .main {
+        position: relative;
+    }
+
+        .banner > .title {
+            color: #ffffff;
+            position: absolute;
+            font-family: '宋体';
+            top: 200px;
+            right: 50%;
+            margin-right: -176px;
+        }
+
+    .main-tab {
+        position: absolute;
+        top: 420px;
+        left: 0px;
+        width: 100%;
+    }
+
+        .main-tab .tabs {
+            height: 80px;
+            background-color: rgba(0,0,0,0.6);
+        }
+
+            .main-tab .tabs .ul-tab {
+                height: 80px;
+            }
+
+                .main-tab .tabs .ul-tab li {
+                    height: 100%;
+                    width: 160px;
+                    text-align: center;
+                    float: left;
+                    display: inline-block;
+                    margin-bottom: 1px;
+                    margin-right: 2px;
+                }
+
+                    .main-tab .tabs .ul-tab li a {
+                        display: inline-block;
+                        height: 100%;
+                        width: 100%;
+                        font-size: 16px;
+                        line-height: 80px;
+                        color: #ffffff;
+                        transition: all 0.3s ease-out;
+                    }
+
+    .nav-tabs > li.active > a {
+        color: #333 !important;
+        background-color: #ffffff;
+        border: 1px solid #dedede;
+        border-bottom-color: #fbfbfb;
+        trans;
+    }
+
+        .nav-tabs > li.active > a:hover {
+            color: #333;
+            background-color: #ffffff;
+            border: 1px solid #dedede;
+            border-bottom-color: #fbfbfb;
+        }
+
+    .nav-tabs > li > a:hover {
+        background-color: rgba(0,0,0,0.8);
+        border-bottom-color: transparent;
+    }
+
+    .main-cont {
+        background-color: #f1f1f1;
+    }
+
+        .main-cont .cont-desc {
+            background-color: #ffffff;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+            .main-cont .cont-desc .descs h5 {
+                color: #23A1F6;
+            }
+
+            .main-cont .cont-desc .descs p {
+                text-indent: 2em;
+                line-height: 1.8;
+                font-size:15px;
+            }
+            .main-cont .cont-desc .descs .desc-img > img {
+            margin-right:20px;
+            }
+            .main-cont .cont-desc .descs .desc-item {
+            margin-bottom:20px;
+            }
+</style>
+<div class="main">
+    <!--banner-->
+    <div id="banner" class="banner">
+        <img src="~/Content/Images/banner-bg.jpg" />
+        <div class="title">
+            <h2 class="text-right">在这里</h2>
+            <h2>让我们再一次为梦想窒息</h2>
+        </div>
+    </div>
+    <!--end banner-->
+    <div class="main-tab">
+        <div class="container">
+            <div class="tabs">
+                <ul class="nav nav-tabs ul-tab">
+                    <li class="active"><a href="#">公司简介</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">职位招聘</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-cont">
+        <div class="container">
+            <div class="cont-desc">
+                <div class="descs">
+                    <div class="desc-item desc-text">
+                        <h5>华邦互联简介</h5>
+                        <p>
+                            华邦互联信息科技有限公司（以下简称：华邦互联）成立于2016年，注册资本3000万元，公司所在地位于湖南省省会城市——长沙。
+                        </p>
+                        <p>
+                            华邦互联专注于智慧城市、智慧安防、智慧园区、智慧生活、智慧物业后勤等领域的智能化、信息化、智慧化综合解决方案的研究与探索。公司业务现涉及软件研发销售、系统集成、项目实施、IT系统售后及提供工程项目的实施服务。主要产品及服务广泛应用于边防、海警、公共安全、交通、房地产的信息化、智能化、智慧化领域。通过不断研发投入及项目实施，我们在智慧边防、智慧海警、智慧社区、智能楼宇、智能家居、智能终端等方面取得长足进展；在物联网平台及智慧应用方面，大数据采集应用、智能网关、IP监控与通信等技术也取得丰硕成果；在互联网领域，电商平台与信息推送平台也为不同领域的客户提供互联网+方面的服务与支持。
+                        </p>
+                        <p>
+                            技术的不断创新是企业发展的保证，华邦互联通过对行业客户需求的深入理解，为客户开发个性化创新解决方案，结合行业先进管理理念和国家方针政策，不断的补充完善，不断的发展核心技术，力求成为智慧行业引领者。
+                        </p>
+                        <p>
+                            华邦科技专注于智慧城市的研发，并且取得斐然的成绩，然而智慧城市的工作不是一蹴而就的，特别是由于我国城市化起步较晚、基础较弱，在当期我国经济社会转型升级的关键时期，智慧城市作为一个全新的系统工程，其建设发展将面临诸多挑战。特别是智慧城市建设在体制机制、理念与应用创新、建设运营模式、核心资源开发、人才及管理架构、信息安全及标准规范体系等几大领域仍存在比较突出的问题。城智科技能否在这一领域打开局面并健康快速发展，在很程度上取决于是否能顺利解决上述问题。智慧城市事业前景光明一片，智慧城市建设过程的问题也很多。智慧城市的建设需要参与者、决策者和关注者投入无限的热情和智慧。
+                        </p>
+                    </div>
+                    <div class="desc-item desc-img clearfix">
+                        <h5>办公环境</h5>
+
+                        <img src="~/Content/Images/desc.jpg" class="img-responsive img-rounded pull-left" />
+
+                        <img src="~/Content/Images/desc2.jpg" class="img-responsive img-rounded pull-left" />
+                    </div>
+                    <div class="desc-item desc-hope clearfix">
+                        <h5>华邦互联愿景</h5>
+                        <p>
+                            让科技改变生活，致力于创造可持续的解决方案。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
