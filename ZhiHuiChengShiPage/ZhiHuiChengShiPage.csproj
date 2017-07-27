@@ -148,6 +148,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\SolutionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -157,14 +158,33 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\20160316_1614107_image001_796451_140493_0.jpg" />
     <Content Include="Content\Images\201608261637160490.jpg" />
+    <Content Include="Content\Images\20161124155506556.jpg" />
+    <Content Include="Content\Images\201611241555545554.jpg" />
+    <Content Include="Content\Images\2016112514010414.jpg" />
+    <Content Include="Content\Images\201611251457195719.jpg" />
+    <Content Include="Content\Images\201704231405384410.jpg" />
+    <Content Include="Content\Images\201704231413202311.jpg" />
+    <Content Include="Content\Images\20170503134111.png" />
+    <Content Include="Content\Images\20170627224643.jpg" />
+    <Content Include="Content\Images\20170628094849.jpg" />
     <Content Include="Content\Images\5967731c7a10f.png" />
     <Content Include="Content\Images\5vsj.png" />
+    <Content Include="Content\Images\banner-bg.jpg" />
+    <Content Include="Content\Images\banner-bg2.jpg" />
+    <Content Include="Content\Images\banner-sub.jpg" />
     <Content Include="Content\Images\banner1.jpg" />
     <Content Include="Content\Images\banner2.jpg" />
     <Content Include="Content\Images\banner3.jpg" />
+    <Content Include="Content\Images\banner5.jpg" />
+    <Content Include="Content\Images\CD_06.png" />
+    <Content Include="Content\Images\CD_07.png" />
+    <Content Include="Content\Images\CD_08.png" />
     <Content Include="Content\Images\cg01_16.png" />
     <Content Include="Content\Images\cg01_20.png" />
+    <Content Include="Content\Images\desc.jpg" />
+    <Content Include="Content\Images\desc2.jpg" />
     <Content Include="Content\Images\foot_bg.jpg" />
     <Content Include="Content\Images\r02.jpg" />
     <Content Include="Content\Images\sj01.png" />
@@ -182,6 +202,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\test.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -209,6 +230,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Solution\Shequ.cshtml" />
+    <Content Include="Views\Solution\Anfang.cshtml" />
+    <Content Include="Views\Solution\Jiaotong.cshtml" />
+    <Content Include="Views\Solution\Wuye.cshtml" />
+    <Content Include="Views\Solution\Xiaoyuan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

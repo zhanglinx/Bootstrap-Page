@@ -1,119 +1,10 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<style type="text/css">
-    .nav-tabs {
-        border-bottom: none;
-    }
-
-    .nav.nav-tabs > li > a {
-        padding: 0;
-    }
-
-    .banner > img {
-        width: 100%;
-        height: 500px;
-    }
-
-    .banner, .main {
-        position: relative;
-    }
-
-        .banner > .title {
-            color: #ffffff;
-            position: absolute;
-            font-family: '宋体';
-            top: 200px;
-            right: 50%;
-            margin-right: -176px;
-        }
-
-    .main-tab {
-        position: absolute;
-        top: 420px;
-        left: 0px;
-        width: 100%;
-    }
-
-        .main-tab .tabs {
-            height: 80px;
-            background-color: rgba(0,0,0,0.6);
-        }
-
-            .main-tab .tabs .ul-tab {
-                height: 80px;
-            }
-
-                .main-tab .tabs .ul-tab li {
-                    height: 100%;
-                    width: 160px;
-                    text-align: center;
-                    float: left;
-                    display: inline-block;
-                    margin-bottom: 1px;
-                    margin-right: 2px;
-                }
-
-                    .main-tab .tabs .ul-tab li a {
-                        display: inline-block;
-                        height: 100%;
-                        width: 100%;
-                        font-size: 16px;
-                        line-height: 80px;
-                        color: #ffffff;
-                        transition: all 0.3s ease-out;
-                    }
-
-    .nav-tabs > li.active > a {
-        color: #333 !important;
-        background-color: #ffffff;
-        border: 1px solid #dedede;
-        border-bottom-color: #fbfbfb;
-        trans;
-    }
-
-        .nav-tabs > li.active > a:hover {
-            color: #333;
-            background-color: #ffffff;
-            border: 1px solid #dedede;
-            border-bottom-color: #fbfbfb;
-        }
-
-    .nav-tabs > li > a:hover {
-        background-color: rgba(0,0,0,0.8);
-        border-bottom-color: transparent;
-    }
-
-    .main-cont {
-        background-color: #f1f1f1;
-    }
-
-        .main-cont .cont-desc {
-            background-color: #ffffff;
-            margin-top: 20px;
-            padding: 20px;
-        }
-
-            .main-cont .cont-desc .descs h5 {
-                color: #23A1F6;
-            }
-
-            .main-cont .cont-desc .descs p {
-                text-indent: 2em;
-                line-height: 1.8;
-                font-size:15px;
-            }
-            .main-cont .cont-desc .descs .desc-img > img {
-            margin-right:20px;
-            }
-            .main-cont .cont-desc .descs .desc-item {
-            margin-bottom:20px;
-            }
-</style>
 <div class="main">
     <!--banner-->
-    <div id="banner" class="banner">
-        <img src="~/Content/Images/banner-bg.jpg" />
+    <div id="banner" class="banner" style="background-image: url(../../Content/Images/banner-bg.jpg); background-size: 100% 100%;">
+        @*<img src="~/Content/Images/banner-bg.jpg" />*@
         <div class="title">
             <h2 class="text-right">在这里</h2>
             <h2>让我们再一次为梦想窒息</h2>
@@ -124,16 +15,17 @@
         <div class="container">
             <div class="tabs">
                 <ul class="nav nav-tabs ul-tab">
-                    <li class="active"><a href="#">公司简介</a></li>
-                    <li><a href="#">联系方式</a></li>
-                    <li><a href="#">职位招聘</a></li>
+                    <li class="active"><a href="#desc" data-toggle="tab">公司简介</a></li>
+                    <li><a href="#contract" data-toggle="tab">联系方式</a></li>
+                    <li><a href="#job" data-toggle="tab">职位招聘</a></li>
+                    <li><a href="#progress" data-toggle="tab">发展历程</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="main-cont">
-        <div class="container">
-            <div class="cont-desc">
+        <div class="container tab-content cont-box">
+            <div class="active  tab-pane cont-desc" id="desc">
                 <div class="descs">
                     <div class="desc-item desc-text">
                         <h5>华邦互联简介</h5>
@@ -164,6 +56,110 @@
                         </p>
                     </div>
                 </div>
+            </div>
+
+            <div class="cont-contract tab-pane" id="contract">
+                <div class="contract">
+                    <h5>公司座机</h5>
+                    <p>010-12000</p>
+                    <h5>客服QQ</h5>
+                    <p>
+                        123456
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=976720945&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:976720945:52" alt="qq在线咨询" title="qq在线咨询" /></a>
+                        (工作时间周一至周六9:00-16:00)
+                    </p>
+                    <h5>公司地址</h5>
+                    <p>北京市石景山区鲁谷路西鑫大厦顶层</p>
+
+                </div>
+            </div>
+
+            <div class="cont-job tab-pane" id="job">
+                <div class="job">
+                    <h5>.NET工程师</h5>
+                    <dl>
+                        <dt>岗位职责：</dt>
+                        <dd>1、参与项目功能系统设计与开发；</dd>
+                        <dd>2、与团队其他成员协作/沟通，解决技术难题；</dd>
+                        <dd>3、学习和研究新技术以满足产品的需求；</dd>
+                        <dd>4、根据开发过程中的体验对产品提出改进建议；</dd>
+                        <dd></dd>
+                    </dl>
+                    <dl>
+                        <dt>任职资格：</dt>
+                        <dd>1、专科及以上学历，3年以上.Net开发经验；</dd>
+                        <dd>2、精通B/S结构编程；精通ASP.NET架构；</dd>
+                        <dd>3、精通SQL2005/MYSQL，精通视图、存储过程、触发器、事务和大数据量优化；有一定的数据库设计能力；</dd>
+                        <dd>4、熟练掌握HTML、JavaScript、DIV+CSS 等前端技术；</dd>
+                        <dd>5、熟悉Visual Studio 2012/2013开发环境，了解UML等建模语言、PowerDesigner、SVN等常用开发工具；</dd>
+                        <dd>6、有多层架构开发经验，熟悉WebService、Linq、Entity Framework、WCF、多线程开发；精通MVC+EF框架；</dd>
+                        <dd>7、有规范化、标准化的代码编写习惯，能够编写规范的开发文档；</dd>
+                        <dd>8、有强烈的责任心和团队合作精神及认真的工作态度,沟通能力、学习能力强, 良好的执行能力，很好的完成预定任务；</dd>
+                    </dl>
+
+                      <h5>UI设计师</h5>
+                     <dl>
+                         <dt>岗位职责：</dt>
+                         <dd>1.负责移动端、PC端界面设计，网站界面设计；</dd>
+                         <dd>2.支持公司产品运营在线活动设计需求；</dd>
+                         <dd>3.负责与前端及研发人员协调，完成高还原度页面</dd>
+                         <dd>4.对交互设计与用户体验有一定理解，协助产品经理提升页面效果与用户体验。</dd>
+                     </dl>
+
+                    <dl>
+                        <dt>任职要求：</dt>
+                        <dd>1.负责移动端、PC端界面设计，网站界面设计；</dd>
+                        <dd>2.支持公司产品运营在线活动设计需求；</dd>
+                        <dd>3.负责与前端及研发人员协调，完成高还原度页面;</dd>
+                        <dd>4.对交互设计与用户体验有一定理解，协助产品经理提升页面效果与用户体验。</dd>
+                    </dl>
+
+                    <h5>web前端工程师</h5>
+                    <dl>
+                        <dt>岗位职责：</dt>
+                        <dd>1、负责将设计制作的页面效果做成标准的HTML网页原型；</dd>
+                        <dd>2、负责开放平台前端静态页面JS交互效果编写及修改； </dd>
+                        <dd>3、负责开放平台WEB前端（动态页面）最终交互效果的实现及修改；</dd>
+                        <dd>4、负责协调技术开发人员进行页面与后台程序衔接；</dd>
+                        <dd>5、优化网站前端性能； </dd>
+                        <dd>6、优化用户界面易用性。</dd>
+                    </dl>
+                    <dl>
+                        <dt>任职资格：</dt>
+                        <dd>1．要求有实际项目开发经验2年及以上，大专及以上学历。</dd>
+                        <dd>2．精通HTML/XHTM及JavaScript，熟悉W3C标准，熟练应用开源JavaScript库(如JQuery）；</dd>
+                        <dd>3．可以快速、简练的将网页设计图，使用DIV+CSS编写成静态页面，能够使用JS手工编写前端效果，能够使用AJAX方法实现前端效果，熟悉相关规范,有丰富的跨浏览器开发经验；</dd>
+                        <dd>4、精通JS或Jquery者优先。</dd>
+                        <dd>5．熟悉前端页面优化，具有高性能网站的构建经验者优先；</dd>
+                        <dd>6．具有优秀的学习能力与创新能力，并能够承担较强的工作压力；</dd>
+                        <dd>7．对用户体验与功能易用性有较为深刻的理解 ；</dd>
+                        <dd>8．良好的团队合作意识和积极的工作态度；</dd>
+                        <dd>9．有后台开发经验者优先； </dd>
+                    </dl>
+
+                    <h5>网络营销</h5> 
+                    <dl>
+                        <dt>岗位职责：</dt>
+                        <dd>1.负责销售和推广公司的互联网产品；</dd>
+                        <dd>2.利用网络进行渠道开发和业务拓展；</dd>
+                        <dd>3.根据市场营销计划，完成部门销售指标； </dd>
+                        <dd>4.开拓新市场，发展新客户，增加产品销售范围；</dd>
+                        <dd>5.负责所负责产品信息的收集及竞争对手的分析；</dd>
+                        <dd>6.管理维护客户关系以及客户间的长期战略合作计划。</dd>
+                        <dt> 任职资格</dt>
+                        <dd>1.大专以上学历毕业，专业不限；</dd>
+                        <dd>2.工作经验不限，优秀应届毕业生带薪培训；</dd>
+                        <dd>3.反应敏捷、表达能力强，具有较强的沟通能力及交际技巧，具有亲和力；</dd>
+                        <dd>4.具有一定的市场分析及判断能力，良好的客户服务意识；</dd>
+                        <dd>5.有责任心，能承受较大的工作压力；</dd>
+                        <dd>6.具有营销的狼性，有团队协作精神以及善于挑战。</dd>
+                    </dl>
+
+                </div>
+            </div>
+
+            <div id="progress" class="tab-pane cont-progress">
+                 发展历程
             </div>
         </div>
     </div>

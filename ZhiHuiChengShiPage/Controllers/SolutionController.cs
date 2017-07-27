@@ -6,28 +6,27 @@ using System.Web.Mvc;
 
 namespace ZhiHuiChengShiPage.Controllers
 {
-    public class HomeController : Controller
-    {
-        public ActionResult Index()
+    public class SolutionController : Controller
+    { 
+        public ActionResult Shequ()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Anfang()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Xiaoyuan()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
-
-        public ActionResult Solution()
+        public ActionResult Wuye()
+        {
+            return View();
+        }
+        public ActionResult Jiaotong()
         {
             return View();
         }

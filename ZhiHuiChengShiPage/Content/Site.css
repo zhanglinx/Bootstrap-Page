@@ -1,24 +1,117 @@
-﻿/*body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}*/
+﻿
+        /*主题颜色 color：#23A1F6*/
+          /*global*/
+           html>body{font-family:"PingFang-SC-Light","PingFang SC","Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,Verdana,"Microsoft Yahei",sans-serif;font-size:14px;}
+           *{padding:0;margin:0}
+           html ul{list-style:none;}
+           html a:hover,a:focus{text-decoration:none;}
+           @media (max-width: 767px) {.h1, h1 {font-size:26px}.h2, h2 {font-size:22px}.h3, h3 {font-size:20px}.h4, h4 {font-size:16px}.h5, h5 {font-size:14px}.h6, h6 {font-size:12px}}
+           @media (min-width: 768px) {.h1, h1 {font-size:28px}.h2, h2 {font-size:26px}.h3, h3 {font-size:24px}.h4, h4 {font-size:20px}.h5, h5 {font-size:18px}.h6, h6 {font-size:14px}}
+           @media (min-width: 992px) {.h1, h1 {font-size: 34px;}.h2, h2{font-size:30px}.h3, h3 {font-size:26px}.h4, h4 {font-size:22px}.h5, h5 {font-size:18px}.h6, h6 {font-size:14px}}
+           @media (min-width: 1200px) {.h1, h1 {font-size:36px}.h2, h2 {font-size:32px}.h3, h3 {font-size:28px}.h4, h4 {font-size:24px}.h5, h5 {font-size:18px}.h6, h6 {font-size:14px}}
+          /*end global*/
+        /*bootstrap 覆盖样式*/
+        html .navbar-nav>li>a:hover,.navbar-nav>li>a:focus{background:none;}
+        html .navbar-nav > li {position:relative}
+        html .navbar-nav li > a {line-height:20px;color:#ffffff;padding-left:30px;padding-right:30px}
+        html .navbar-nav li>a:hover{color:#23A1F6;}
+        .navbar-static-top {padding:20px 0;position:relative}
+        html .carousel-inner>.item>img {width:100%;height:100% }
+        html .carousel-inner > .item {}
+        .glyphicon-align-justify {color:#ffffff}
+        .container {padding:0}
+        .nav > li > a:hover {background-color:none !important}
+        /*nav style*/
+        /*mobile nav*/
+        .mobile-nav{position:fixed; background-color:#373737; width:220px; height:100%; z-index:8888; left:0; top:0; transition:all 0.25s ease-out 0s; -webkit-transition:all 0.25s ease-out 0s; -moz-transition:all 0.25s ease-out 0s;} 
+        .hide-nav{transform:translateX(-220px);}
+        .show-nav{transform:translateX(0px);} 
+        .mobile-nav ul li a{color:gray; display:block; padding:1em 5%; border-top:1px solid #4f4f4f; border-bottom:1px solid #292929; transition:all 0.2s ease-out; cursor:pointer;}
+        .mobile-nav ul li a:hover {background-color: #23A1F6;color: #ffffff;}
+        .mobile-nav-trigger {background-color:#23A1F6;display:inline-block;width:35px;height:35px;text-align:center;line-height:35px; position:absolute;right:0;top:20px;margin-right:20px;cursor:pointer;}
+       /*end mobile nav*/
+         #header {position:fixed;top:0;width:100%;z-index:1000;}
+        .nav-logo {height:50px;line-height:50px;}
+        .li-easein{transition:all .5s ease-in .1s;-webkit-transition:all .5s ease-in .1s;-moz-transition:all .5s ease-in .1s}
+        .navbar .nav-submenu {display:none;}
+        .nav .nav-submenu {width:120px;padding:10px 0;text-align:center;position:absolute;background-color:rgba(23,34,48,.7);border-top:2px solid #ffffff;display:none;top:50px;left:50%;margin-left:-60px;}
+        .navbar-nav li:hover .nav-submenu{display:block;}
+        html .navbar .nav-submenu li>a{height:35px;line-height:35px;display:inline-block;padding:0 !important}
+        .span_arrow {position:absolute;left:50%;top:-10px;margin-left:-10px}
+        .arrow_up{height:0;width:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px  solid #ffffff}
+        /*end nav style*/
+        /*footer style*/
+        footer {background-image:url(../../Content/Images/foot_bg.jpg);background-size:100% 100%;color:#ffffff;}
+        footer a,footer ul > li{color:#ffffff;margin-bottom:5px;}
+        .a-easein{transition:all ease-in 0.3s}
+        .a-easein:hover {color:#23A1F6}
+        footer .company {margin:20px 0}
+        footer h5 {margin-bottom:20px}
+        footer .footer-top {padding:20px 0}
+        html footer h5 span{ border-bottom:2px solid #23A1F6;padding-bottom:5px}
+        footer .footer-bottom {font-family:'宋体';background-color:rgba(0,0,0,0.3)}
+        /*end footer style*/
+        .banner > .title{color: #ffffff; position: absolute; font-family: '宋体'; top: 200px; right: 50%; margin-right: -176px;}
+         /*solution*/ 
+         .banner-sub{background-image: url(../../Content/Images/banner-sub.jpg);background-size: 100%;height: 200px;padding-left: 20px;margin-bottom:30px}
+.banner-sub > h4{padding-top: 100px;color:#23A1F6}
+ .banner{background-image: url(../../Content/Images/banner-bg2.jpg);background-size: 100% 100%;height: 500px;}
+.main-cont{background-color: #f1f1f1;padding: 20px 0;}
+.main-cont > .container > .cont{background-color: #ffffff;padding: 20px;height: 100%;}
+.left-menu{background-color: #ffffff;border: 1px solid #dedede;}
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+.right-cont{padding: 20px;background-color: #ffffff;border: 1px solid #dedede;margin-left: 20px;}
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.left-menu > h4{font-size: 18px;background-color: #23A1F6;color: #ffffff;font-family: '宋体';text-align: center;padding: 20px 0;margin-top: 0;font-weight: 600;margin-bottom: 0;border-bottom: 1px solid #f1f1f1;}
+.left-menu .ul-menu li a{color: #333;transition: all 0.2s ease-out;}
+.left-menu .ul-menu li.active a{background-color: #23A1F6;color: #ffffff;}
+.ul-menu li a:hover{background-color: #23A1F6;color: #ffffff;}
+      .row > .col-md-2{padding: 0;}
+     .col-sm-12{padding: 0;}
+      .cont-box p,dl dd{text-indent: 2em;line-height: 1.8;font-size: 15px;}
+         /*end solution*/ 
+          /* contract*/
+          .nav-tabs{border-bottom: none;}
+            .nav.nav-tabs > li > a{padding: 0px 25px;} 
+  .main-tab{top: 420px; left: 0px; width: 100%;} 
+  .main-tab .tabs{height: 60px; background-color: rgba(0,0,0,0.6);}
+    .tab-content.cont-box {border:1px solid #dedede}
+  .main-tab .tabs .ul-tab{margin-top: -60px; height: 60px;}
+  .main-tab .tabs .ul-tab li{float: left; text-align: center; height: 100%;}
+  .main-tab .tabs .ul-tab li a{height: 100%; line-height: 60px; color: #ffffff; font-size: 16px; transition: all 0.2s ease-out;}
+  .nav-tabs > li.active > a:hover{color: #333; background-color: #ffffff; border: 1px solid #dedede; border-bottom-color: #fbfbfb;} 
+  .nav-tabs > li.active > a{color: #333 !important; background-color: #ffffff; border: 1px solid #dedede; border-bottom-color: #fbfbfb;}
+  .nav-tabs > li > a:hover{background-color: rgba(0,0,0,0.8); border-bottom-color: transparent;}
+  .main-cont .cont-desc, .cont-contract, .cont-job,.cont-progress{padding: 20px; background-color: #ffffff;}
+  .main-cont h5{color: #23A1F6;}
+  .cont-box p ,dl dd{text-indent: 2em; line-height: 1.8; font-size: 15px;}
+  .cont-box img{margin-right: 20px; margin-bottom: 10px;}
+  .main-cont .cont-desc .descs .desc-item{margin-bottom: 20px;}
+          /*end contract*/
+        @media(min-width:768px)
+        {
+           .carousel-inner > .item ,#banner {height:300px !important;}
+           .banner > .title {top:100px !important;} 
+        }
+       @media (min-width:992px) {
+         .carousel-inner > .item, #banner {height: 400px !important;}
+         .banner > .title {top:150px !important;} 
+         .bg-black {
+        background-color: #373737 !important;
+        padding: 0;
+        transition: all .5s ease-in-out;
+          }
 }
-
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
+        @media(min-width: 1200px) {
+          .carousel-inner > .item,#banner  {height:500px !important;}
+          .banner > .title {top:200px !important;} 
+        }
+        @media(max-width:768px){
+           .carousel-inner > .item ,#banner {height:300px !important;}
+            .banner > .title {top:80px !important} 
+        }
+           @media (max-width:992px) {
+           .ul-menu > li {float: left;width: 25%;text-align: center;}
+           .main-tab .tabs .ul-tab li{width:25%;}
+           .right-cont {margin-left: 0 !important;margin-top: 20px;}
+         }
